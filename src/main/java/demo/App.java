@@ -12,6 +12,7 @@ public class App {
         Automate_post_on_linkedin linkedin = new Automate_post_on_linkedin();
 //        //TODO: call your test case functions one after other here
         Automate_image_urls images = new Automate_image_urls();
+        Automate_nested_frames_text frames = new Automate_nested_frames_text();
 //
         tests.testCase01();
         tests.endTest(); // End your test by clearning connections and closing browser
@@ -21,6 +22,8 @@ public class App {
         linkedin.endTest();
         images.testCase01();
         images.endTest();
+        frames.testCase01();
+        frames.endTest();
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
