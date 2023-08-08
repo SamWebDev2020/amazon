@@ -9,12 +9,15 @@ public class App {
     public void getGreeting() throws InterruptedException, MalformedURLException {
         TestCases tests = new TestCases(); // Initialize your test class
         Automate_count_hyperlinks hyperlink_count = new Automate_count_hyperlinks();
+        Automate_post_on_linkedin linkedin = new Automate_post_on_linkedin();
         //TODO: call your test case functions one after other here
 
         tests.testCase01();
         tests.endTest(); // End your test by clearning connections and closing browser
         hyperlink_count.testCase01();
         hyperlink_count.endTest();
+        linkedin.testCase01();
+        linkedin.endTest();
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
