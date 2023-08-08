@@ -10,14 +10,17 @@ public class App {
         TestCases tests = new TestCases(); // Initialize your test class
         Automate_count_hyperlinks hyperlink_count = new Automate_count_hyperlinks();
         Automate_post_on_linkedin linkedin = new Automate_post_on_linkedin();
-        //TODO: call your test case functions one after other here
-
+//        //TODO: call your test case functions one after other here
+        Automate_image_urls images = new Automate_image_urls();
+//
         tests.testCase01();
         tests.endTest(); // End your test by clearning connections and closing browser
         hyperlink_count.testCase01();
         hyperlink_count.endTest();
         linkedin.testCase01();
         linkedin.endTest();
+        images.testCase01();
+        images.endTest();
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
