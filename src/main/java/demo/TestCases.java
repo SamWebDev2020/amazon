@@ -1,6 +1,11 @@
 package demo;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.hc.client5.http.impl.routing.SystemDefaultRoutePlanner;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 //Selenium Imports
@@ -33,7 +38,7 @@ public class TestCases {
     }
 
     
-    public  void testCase01(){
+    public  void testCase01() throws InterruptedException {
         System.out.println("Start Test case: testCase01");
         driver.get("https://www.google.com");
         driver.findElement(By.id("APjFqb")).sendKeys("amazon");
@@ -45,9 +50,9 @@ public class TestCases {
                 if (result.getText().contains("amazon.in") || result.getText().contains("amazon.com")) {
                     System.out.println("Search result contains 'amazon.in' or 'amazon.com'. Test passed.");
                     break;
+                }else{
+                    System.out.println("Test case failed");
                 }
-            }else {
-                System.out.println("Search result does not contain 'amazon.in' or 'amazon.com'. Test failed.");
             }
     
         System.out.println("end Test case: testCase01");
