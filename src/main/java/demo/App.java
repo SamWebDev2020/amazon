@@ -14,6 +14,7 @@ public class App {
         Automate_image_urls images = new Automate_image_urls();
         Automate_nested_frames_text frames = new Automate_nested_frames_text();
         Automate_imdb_ratings imdb = new Automate_imdb_ratings();
+        Automate_window_handle window = new Automate_window_handle();
 //
         tests.testCase01();
         tests.endTest(); // End your test by clearning connections and closing browser
@@ -27,6 +28,9 @@ public class App {
         frames.endTest();
         imdb.testCase01();
         imdb.endTest();
+        window.testCase01();
+        window.endTest();
+
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
