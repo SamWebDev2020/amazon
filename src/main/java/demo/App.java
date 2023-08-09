@@ -13,6 +13,7 @@ public class App {
 //        //TODO: call your test case functions one after other here
         Automate_image_urls images = new Automate_image_urls();
         Automate_nested_frames_text frames = new Automate_nested_frames_text();
+        Automate_imdb_ratings imdb = new Automate_imdb_ratings();
 //
         tests.testCase01();
         tests.endTest(); // End your test by clearning connections and closing browser
@@ -24,6 +25,8 @@ public class App {
         images.endTest();
         frames.testCase01();
         frames.endTest();
+        imdb.testCase01();
+        imdb.endTest();
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
